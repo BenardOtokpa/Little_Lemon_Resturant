@@ -2,17 +2,17 @@ import React, { useRef } from 'react'
 
 const Nav = () => {
 
-    const home = useRef(null)
-    const about = useRef(null)
-    const menu = useRef(null)
-    const testimonials = useRef(null)
-    
-    const scrollToSection = (elementRef) => {
-        window.scrollTo({
-            top: elementRef.current.offsetTop,
-            behavior: 'smooth',
-        })
-    }
+    // const home = useRef(null)
+    // const about = useRef(null)
+    // const menu = useRef(null)
+    // const testimonials = useRef(null)
+ 
+    // const scrollToSection = (elementRef) => {
+    //     window.scrollTo({
+    //         top: elementRef.current.offsetTop,
+    //         behavior: 'smooth',
+    //     })
+    // }
   return (
     <nav >
         <ul>
