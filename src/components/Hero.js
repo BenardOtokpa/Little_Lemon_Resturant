@@ -1,13 +1,15 @@
 import React from "react";
 import hero from "../assets/images/Img_pop.png";
-import { Link } from "react-router-dom";
+import { useRef } from "react";
 
 const Hero = () => {
   const handleClick = () => {
     window.location.href = './booking'; // Replace this with the URL you want to navigate to
   };
+  const heroRef = useRef(null);
   return (
-    <div className="hero">
+
+    <div className="hero" ref={heroRef}>
       <div className="banner">
         <h2>Little Lemon</h2>
         <h3>Chicago</h3>

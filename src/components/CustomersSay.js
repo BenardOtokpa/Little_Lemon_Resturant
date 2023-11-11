@@ -4,12 +4,15 @@ import profile1 from "../assets/images/profile1.jpg";
 import profile2 from "../assets/images/profile2-copy-0.jpg";
 import profile3 from "../assets/images/profile3.jpg";
 import profile4 from "../assets/images/profile2.jpg";
+import { useRef } from "react";
 
 
 function Testimonials() {
+  const testRef = useRef(null);
+
   return (
     <>
-      <div className="testimonials" id="testimonials">
+      <div className="testimonials" id="testimonials" ref={testRef}>
         <div className="testimonial-header">
           <h1>Testimonials</h1>
         </div>

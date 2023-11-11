@@ -3,11 +3,14 @@ import Card from './Card'
 import salad from '../assets/images/greek-salad1.jpg'
 import lemon from '../assets/images/lemon-dessert1.jpg'
 import bruchetta from '../assets/images/bruchetta.svg'
+import { useRef } from 'react'
 
 
 const Specials = () => {
+  const specialRef = useRef(null);
+  
   return (
-    <div className='special-sec'>
+    <div className='special-sec' ref={specialRef}>
         <div className='menu-header'>
           <h2>Specials</h2>
           <button>Online Menu</button>

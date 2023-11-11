@@ -1,10 +1,13 @@
+import { useRef } from "react";
 import restaurantChefs from "../assets/images/Mario and Adrian b.jpg";
 import restaurant from "../assets/images/restaurant.jpg";
 import React from "react";
 
 const About = () => {
+  const aboutRef = useRef(null);
+
   return (
-    <div className="about-section">
+    <div className="about-section" ref={aboutRef}>
       <div className="about" id="about">
         <div className="about-content">
           <h4>Little Lemon</h4>
