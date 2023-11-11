@@ -56,6 +56,7 @@ describe("BookingForm", () => {
       const submitButton = screen.getByDisplayValue("Make Your reservation");
       expect(submitButton).toBeInTheDocument();
     });
+  
 
   
     test("initializeTimes returns the correct expected value", () => {
