@@ -218,7 +218,6 @@ button:hover {
   height: 635px;
 }
 .menu-header {
-  /* background-color: tomato; */
   width: 100%;
   height: 60px;
   display: flex;
@@ -283,6 +282,8 @@ button:hover {
   justify-content: center;
   height: auto;
   width: 100%;
+  margin: 0;
+  padding: 0;
   align-items: center;
 }
 .testimonial-header{
@@ -290,7 +291,6 @@ button:hover {
   text-align: start;
 }
 .card-cont{
-  background-color: #ffdf3e;
   display: flex;
   gap: 24px;
   flex-direction: column;
@@ -473,7 +473,8 @@ button:hover {
   .one {
     margin: 10px;
   }
-}.main-cont {
+}
+.main-cont {
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -496,8 +497,8 @@ button:hover {
 }
 
 .form-container {
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
   color: rgb(255, 255, 255);
   font-weight: bold;
   border: 3px solid #f1f1f1;
@@ -509,30 +510,31 @@ button:hover {
   width: 80%;
   padding: 20px;
   text-align: center;
-}
 
+}
 .form-container label {
   color: #ebebeb;
   font-size: 20px;
   font-weight: 800;
   padding: 0 20px;
-}
 
+}
 .title {
   font-family: "Markazi Text", serif;
   color: #ffff;
   font-size: 80px;
   text-align: center;
 }
-
 .sections {
   color: #495e57;
   width: 100%;
   display: flex;
-  flex-direction: column; /* Adjust for mobile layout */
   align-items: center;
+  justify-content: space-evenly;
   padding: 0 20px;
+
 }
+
 
 input[type="number"] {
   width: 4em;
@@ -554,36 +556,55 @@ input[type="number"] {
 }
 
 select {
-  appearance: none;
+   /* Reset */
+   appearance: none;
+   border: 0;
+   outline: 0;
+   /* Personalize */
+   width: 20rem;
+   font-size: 1rem;
+   padding: .5rem 4rem 1rem 0.5rem;
+   background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg)
+       no-repeat right 0.8em center / 1.4em,
+     linear-gradient(
+       to left,
+       rgba(255, 255, 255, 0.3) 3em,
+       rgba(255, 255, 255, 0.2) 3em
+     );
+   color: #fff;
+   border-radius: 0.25em;
+   box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+   cursor: pointer;
+   /* Remove IE arrow */
+   &::-ms-expand {
+     display: none;
+   }
+   /* Remove focus outline */
+   &:focus {
+     outline: none;
+   }
+   /* <option> colors */
+  }
+  option {
+    /* color: red; */
+    background-color: #495e57;
+  }
+
+input {
+  position: relative;
+  width: 300px;
+  height: 50px;
+  padding: 20px;
   border: 0;
-  outline: 0;
-  width: 100%; /* Adjust for mobile layout */
-  font-size: 1rem;
-  padding: 0.5rem;
-  margin-bottom: 10px; /* Adjust for mobile layout */
-  background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg)
-      no-repeat right 0.8em center / 1.4em,
-    linear-gradient(
-      to left,
-      rgba(255, 255, 255, 0.3) 3em,
-      rgba(255, 255, 255, 0.2) 3em
-    );
-  color: #fff;
-  border-radius: 0.25em;
-  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  &::-ms-expand {
-    display: none;
-  }
-  &:focus {
-    outline: none;
-  }
+  background: linear-gradient(45deg, rgb(192, 212, 202), rgb(238, 217, 100));
+  border-radius: 8px;
+  outline: none;
+  margin-bottom: 18px;
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-transform: Uppercase;
+  box-shadow: 0 4px 20px rgba(3, 44, 41, 0.22%);
 }
-
-option {
-  background-color: #495e57;
-}
-
 input {
   width: 100%; /* Adjust for mobile layout */
   margin-bottom: 18px;
@@ -592,11 +613,13 @@ input {
 /* Add a media query for smaller screens */
 @media (max-width: 768px) {
   .main-cont::before {
-    background-size: contain; /* Adjust for smaller screens */
+    background-size: contain;
+    flex-direction: column; /* Adjust for smaller screens */
   }
 
   .form-container {
-    width: 100%; /* Adjust for smaller screens */
+    width: 100%;
+    flex-direction: column; /* Adjust for smaller screens */
   }
 
   .title {
