@@ -16,13 +16,13 @@ const Nav = () => {
   return (
     <nav >
         <ul>
-        <li><a href='the'>Home</a></li>
-        <li><a href='fscrv'>About</a></li>
-        <li><a href='wrvwrv'>Menu</a></li>
-        <li><a href='wrv'>Reservations</a></li>
-        <li><a href='wvwrv'>Order Online</a></li>
-        <li><a href='wvr'>Testimonials</a></li>
-        <li><a href='wrv'>LogIn</a></li>
+        <li><a href='/'>Home</a></li>
+        <li><a href='/'>About</a></li>
+        <li><a href='/'>Menu</a></li>
+        <li><a href='/booking'>Reservations</a></li>
+        <li><a href='/'>Order Online</a></li>
+        <li><a href='/'>Testimonials</a></li>
+        <li><a href='/'>LogIn</a></li>
     </ul>
     </nav>
   )
